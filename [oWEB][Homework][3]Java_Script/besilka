@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+    <script type="text/javascript" src="Hangman.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hangman Game</h1>
+    </header>
+
+    <section class="game">
+        <div class="text">
+            <form action="" method="get"></form>
+            <h2>Make your guess</h2>
+            <h1 style="padding-top:150px;">__ __ __ __ __ __ __ __</h1>
+            <div class="guess">_</div>
+            <h2 style="padding-top: 100px;"></h2>
+            <input type="submit" value="Check if correct">
+            </form>
+        </div>
+
+        <div class="picture">
+            <h2>Progress:</h2>
+            <img src="resourses/pictures/hangman0.png" alt="" width="95%">
+            <h3>You have</h2> <span id="guesses">5</span>
+                <h3>guesses left</h3>
+        </div>
+
+    </section>
+    <section class="keyboard">
+
+    </section>
+    <section class="Timer">
+        <h3>Timer:</h3> <span id="min">0</span> minutes <span id="sec">0</span> seconds
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
