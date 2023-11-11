@@ -42,10 +42,49 @@ document.writeln(wordLenght);
 //buttonOnClick
 function submitForms(){
     numFalseGuesses++;
-    window.alert("ads")
     setImage();
     document.getElementById("guesses").innerHTML=numMaxGuesses-numFalseGuesses;
+    if(numFalseGuesses >= 5){
+        window.alert("You lost the game, try again");
+        window.location.reload();
+    }else{
+        
+        //
+        //if
+        window.alert("You won the game, try again");
+        window.location.reload();
+    }
+
 }
+
+// function submitForms() {
+
+//     setImage();
+//     document.getElementById("guesses").innerHTML = numMaxGuesses - numFalseGuesses;
+//     if (numFalseGuesses >= 5) {
+//         window.alert("You lost the game");
+//         window.location.reload();
+//     } else {
+//         var testerBeforeSplit = window.getElementById("textInput").value;
+//         var tester = testerBeforeSplit.split("");
+//         if (tester.length == wordLenght) {
+//             for (var i = 0; i < wordLenght; i++) {
+//                 if (tester[i] != wordLetterByLetter[i]) {
+//                     numFalseGuesses++;
+//                 break;
+//             }
+//             continue;
+//         }
+//     }else {
+//         numFalseGuesses++;
+//     }
+
+//     //
+//     //if
+//     window.alert("You won the game, try again");
+//     window.location.reload();
+// }
+
 //test true
 function testTrue(){
 
