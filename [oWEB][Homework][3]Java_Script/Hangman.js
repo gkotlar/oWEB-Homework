@@ -42,12 +42,13 @@ document.writeln(wordLenght);
 //buttonOnClick
 function submitForms(){
     numFalseGuesses++;
+    window.alert("ads")
     setImage();
     document.getElementById("guesses").innerHTML=numMaxGuesses-numFalseGuesses;
 }
 //test true
 function testTrue(){
-    
+
 }
 
 //generate 3 random numbers
