@@ -16,30 +16,42 @@
 
     <section class="game">
         <div class="text">
-            <form action="" method="get"></form>
+
             <h2>Make your guess</h2>
-            <h1 style="padding-top:150px;">__ __ __ __ __ __ __ __</h1>
-            <div class="guess">_</div>
+            <h1 style="padding-top:150px;">
+                <table border="1" class = "table">
+                    <tbody >
+                        <tr id="letters">
+                            <td >s</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </h1>
             <h2 style="padding-top: 100px;"></h2>
-            <input type="submit" value="Check if correct">
-            </form>
+
         </div>
 
         <div class="picture">
             <h2>Progress:</h2>
-            <img src="resourses/pictures/hangman0.png" alt="" width="95%">
-            <h3>You have</h2> <span id="guesses">5</span>
+            <img src="resourses/pictures/hangman0.png" id="hangmanPic" alt="hangman0" width="95%" height="60%">
+            <h3>You have</h3> <span id="guesses">5</span>
                 <h3>guesses left</h3>
         </div>
 
     </section>
     <section class="keyboard">
-
-    </section>
-    <section class="Timer">
-        <h3>Timer:</h3> <span id="min">0</span> minutes <span id="sec">0</span> seconds
+        <div class="guess">
+            <!-- <input type="text" name="letter1" id="letter" size="1" maxlength="1"> -->
+            <form action="" onsubmit="testTrue" method="get">
+                <input type="text" name="" id="WordGuessed">
+                <input type="submit" id="formSubmit" value="Check if correct">
+            </form>
+            <button id="Submit" onclick="submitForms()">ssad</button>
+        </div>
     </section>
     <footer>
+
+        <h3>Timer:</h3> <span id="min">0</span> minutes <span id="sec">0</span> seconds
 
     </footer>
 </body>
