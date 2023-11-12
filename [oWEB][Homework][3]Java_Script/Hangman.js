@@ -16,11 +16,10 @@ function updateTime() {
 }
 window.addEventListener("load", startTimer, false);
 
-// image
 var numFalseGuesses = 0;
 var numMaxGuesses = 5;
 
-function setImage() {
+function setImage() { //js for the picture change
     if(numFalseGuesses<=numMaxGuesses){
     iconImg = document.getElementById("hangmanPic");
     iconImg.setAttribute("src", "resourses/pictures/hangman" + numFalseGuesses + ".png");
@@ -34,30 +33,29 @@ var wordToBeGuessed = wordArray[Math.floor(Math.random() * wordNum)];
 
 var wordLenght = wordToBeGuessed.length;
 var wordLetterByLetter = wordToBeGuessed.split("");
-
+var playAgain;
 document.writeln(wordToBeGuessed);
 document.writeln(wordLenght);
 
+function submitForms(){ //buttonOnClick
 
-//buttonOnClick
-function submitForms(){
-    numFalseGuesses++;
+    var te = testTrue();
+    if(te){
+        playAgain = window.confirm("You won the game, in " + minutes + " minutes and " + seconds + " seconds,  try again");
+        if(playAgain) setTimeout(function(){ location.reload(); }, 500);
+
+    }else{
+        numFalseGuesses++;
+    }
     setImage();
     document.getElementById("guesses").innerHTML=numMaxGuesses-numFalseGuesses;
     if(numFalseGuesses >= 5){
-        window.alert("You lost the game, try again");
-        window.location.reload();
-    }else{
-        
-        //
-        //if
-        window.alert("You won the game, try again");
-        window.location.reload();
+       playAgain = window.confirm("You lost the game, in " + minutes + " minutes and " + seconds + " seconds,  try again");
+       if(playAgain) setTimeout(function(){ location.reload(); }, 500);
     }
-
 }
 
-// function submitForms() {
+// function submitForms() { //old try not working
 
 //     setImage();
 //     document.getElementById("guesses").innerHTML = numMaxGuesses - numFalseGuesses;
@@ -86,26 +84,40 @@ function submitForms(){
 // }
 
 //test true
-function testTrue(){
 
+function testTrue(){ // check if the imput and the word to be quessed are the same
+    var textInput = document.getElementById("textInput");
+    var textInputLetterByLetter = textInput.value.split("");
+    if(textInputLetterByLetter.length!=wordLenght) { // check if the char nums are equal
+        // document.getElementById("toast").innerHTML="character count not equal";
+        textInput.value="Character count not equal";
+        return false; 
+    }
+    for (var i = 0; i < wordLenght; i++) {
+        if(wordLetterByLetter[i] != textInputLetterByLetter[i]){
+            textInput.value="false";
+            return false;
+        }
+    }
+    textInput.value="true";
+    return true;
 }
 
 //generate 3 random numbers
 var num1 = Math.floor(Math.random() * wordLenght);
 var num2 = Math.floor(Math.random() * wordLenght);
-
-while(num1==num2){
-    num2 = Math.floor(Math.random() * wordLenght);
-}//ensure 1 and 2 are different
-
 var num3 = Math.floor(Math.random() * wordLenght);
-while(num1==num3 || num2==num3){
-    num3 = Math.floor(Math.random() * wordLenght);
-}// ensure that all are different
 
-//initialise table
+while(num1==num2){ //ensure 1 and 2 are different
+    num2 = Math.floor(Math.random() * wordLenght);
+}
+
+while(num1==num3 || num2==num3){ // ensure that all are different
+    num3 = Math.floor(Math.random() * wordLenght);
+}
+
 var wordTable="";
-for (var i = 0; i < wordLenght; i++) {
+for (var i = 0; i < wordLenght; i++) {//initialise table
     if(i==num1||i==num2||i==num3)
     wordTable += "<td>" + wordToBeGuessed[i] + "</td>";
     else{
