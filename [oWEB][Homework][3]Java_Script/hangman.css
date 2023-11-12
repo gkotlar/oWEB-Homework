@@ -17,14 +17,14 @@ header h1
 }
 section.game
 {
-    height: 450px;
+    height: 400px;
 }
 section.game div.text
 {
     width: 40%;
     float: left;
     background-color: aliceblue;
-    height: 500px;
+    height: 400px;
     text-align: center;
     border-radius: 50px;
 
@@ -33,7 +33,7 @@ section.game div.picture
 {
     width: 55%;
     float: right;
-    height: 500px;
+    height: 400px;
     background-color: bisque;
     text-align: center;
     overflow: hidden;
