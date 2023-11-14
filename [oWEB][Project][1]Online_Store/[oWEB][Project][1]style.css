@@ -1,0 +1,220 @@
+img.icon_xs {
+    height: 15px;
+}
+
+img.icon_s {
+    height: 30px;
+}
+
+img.icon_m {
+    height: 40px;
+}
+
+b {
+    font-size: large;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: Tahoma, sans-serif;
+}
+
+nav {
+    position: relative;
+    font-weight: bolder;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: #FF7F50;
+    overflow: hidden;
+}
+
+a.nav:hover {
+    color: orangered;
+}
+
+a.nav {
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a {
+    /* ??? */
+    float: left;
+    padding: 20px 20px;
+}
+
+div.space {
+    padding-bottom: 50px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+section.picture {
+    background-image: url(Resourses/303450-landscape-beach-sunset.jpg);
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+div.row {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.column {
+    float: left;
+    width: 33%;
+
+    padding: 0 10px;
+    height: 300px;
+}
+
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    background-color: #f1f1f1
+}
+
+thead {
+    background-color: coral;
+}
+
+table {
+    border: 1;
+    border-style: groove;
+    border-color: coral;
+    position: relative;
+    width: 60%;
+    left: 20%;
+}
+
+section.survey ul li {
+    float: left;
+    margin: 7px;
+    list-style: none;
+    text-align: center;
+}
+
+section.survey td.radiogroup {
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+section.survey td.radiogroup ul li {
+    position: relative;
+    left: 34%;
+
+}
+
+section.survey td.slider {
+    text-align: center;
+}
+
+textarea {
+    background-color: aliceblue;
+    overflow: hidden;
+    position: relative;
+    left: 2%;
+    width: 95%;
+}
+
+td.survey_end {
+    float: right;
+}
+
+tfoot {
+    background-color: coral;
+}
+
+div.btn_b {
+    border-radius: 30px;
+    background-color: #FF7F50;
+    color: #f1f1f1;
+    width: 400px;
+    height: 120px;
+    text-align: center;
+    font-size: large;
+}
+
+footer {
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+
+
+div.dark_part {
+    position: relative;
+    background-color: coral;
+    padding: 70px 0;
+}
+
+div.textSummary {
+    position: relative;
+    background-color: #F5DEB3;
+    height: 450px;
+    padding: 10px 0;
+}
+
+div.light_part {
+    position: relative;
+    background-color: #F5DEB3;
+    padding: 70px 0;
+}
+
+div.container {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+}
+
+div.container2 {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    text-align: center;
+}
+
+div.left {
+    float: left;
+}
+
+div.right {
+    float: right;
+}
+
+div.centered {
+    float: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+a.nav {
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
+}

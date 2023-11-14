@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online store</title>
+    <link rel="icon" type="image/x-icon" href="[DD][Tasklist] sIPF logo second drafts-04-modified.png">
+    <link rel="stylesheet" type="text/css" href="[oWEB][Project][1]Online_store.css">
+    <script src="onlines.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header class="main">
+        <a href="[DD][Tasklist] sIPF logo second drafts-04-modified.png">
+            <img src="[DD][Tasklist] sIPF logo second drafts-04-modified.png" alt="logo" width="100"> </a>
+    </header>
+    <nav>
+        <a href="[oWEB][Project][1]Online_store.html#home">Home</a>
+        <a href="[oWEB][Project][1]Online_store.html#categories"> Categories</a>
+        <a href="[oWEB][Project][1]Online_store.html#pictures">Pictures</a>
+        <a href="[oWEB][Project][1]Online_store_feedback.html">Feedback</a>
+        <a href="[oWEB][Project][1]Online_store_contact.html">Contact</a>
+    </nav>
+
+    <div style="height: 60px;"></div>
+
+
+    <section class="contact" id="contact">
+        <p></p>
+        <form method="post" action="">
+            <input type="hidden" name="recipient" value="gjorgji.kotlarovski@gmail.com">
+            <input type="hidden" name="subject" value="Feedback Form">
+            <input type="hidden" name="redirect" value="main.html">
+            <table border=1>
+
+                <thead>
+                    <th colspan="">Contact us</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="contact_fname">First name: </label>
+                            <input type="text" name="contact_fname" id="contact_fname" size="25" maxlength="30">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="contact_lname">Last name: </label>
+                            <input type="text" name="contact_lname" id="contact_lname" size="25" maxlength="30">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="contact_email">Email adress: </label>
+                            <input type="email" name="contact_email" id="contact_email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contact_reason">Why are you contacting us:</label>
+                            <select name="contact_reason" id="contact_reason">
+                                <option value="0">Chose an area</option>
+                                <option value="1">Technical issues & questions</option>
+                                <option value="2">Payments</option>
+                                <option value="3">Marketing</option>
+                                <option value="4">Report scam & fraud</option>
+                                <option value="5">Data privacy</option>
+                                <option value="6">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contact_priority">Priority:</label>
+                            <select name="contact_priority" id="contact_priority">
+                                <option value="0">- - - - </option>
+                                <option value="1">High</option>
+                                <option value="2">Medium</option>
+                                <option value="3">Low</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contact_subject">Subject: </label> <br>
+                            <input type="text" name="contact_subject" id="contact_subject" size="50" maxlength="60">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contact_message">Message:</label> <br>
+                            <textarea name="contact_message" id="contact_message" cols="50" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="contact_files">Attach any files relevant to your request:</label> <br>
+                            <input type="file" name="contact_files" id="contact_files">
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <td class="survey_end">
+                        <input type="reset" value="Clear">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tfoot>
+            </table>
+        </form>
+    </section>
+
+    <div style="height: 60px;"></div>
+
+    <footer class="basic" id="footer">
+        <ul>
+            <li>Адреса: Baraka 5, FEIT, Rugjer Boshkovik bb, Septemvriska Sesija 5, Skopje 1000</li>
+            <li>Телефон: 074 204 269</li>
+            <li>Социјални мрежи</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
