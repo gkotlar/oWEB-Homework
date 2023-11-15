@@ -6,11 +6,24 @@ img.icon_s {
     height: 30px;
     
 }
-
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: gainsboro; 
+    border-radius: 10px;
+  }
+    ::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+  }
 img.icon_m {
     height: 40px;
     padding: 0%;
     margin: 0%;
+}
+img.icon_l {
+    height: 160px;
+    margin: 20px;
 }
 
 a {
@@ -135,31 +148,83 @@ div.btn_s {
     color: #f1f1f1;
     width: 120px;
     height: 45px;
+    line-height: 45px;
     text-align: center;
     font-size: large;
     position: absolute;
     left: 60%;
     bottom: -10%;
-
+}
+div.btn_s:hover{
+    background-color:orangered;
+}
+div.btn_xs{
+    background-color: #FF7F50;
+    color: #f1f1f1;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: x-small;
+    position: absolute;
+    margin: 5px;
+    right: 0;
+}
+div.btn_xs:hover{
+    background-color: orangered;
 }
 
 div.cardcomments {
     background-color: #f1f1f1;
-    color: black;
     width: 400px;
     height: 150px;
-    overflow: auto;
 }
+div.cardcommentc {
+    color: black;
+    width: 380px;
+    height: 150px;
+    overflow: auto;
+    padding-left: 10px;
+}
+ul.comments{
+    list-style-type: none;
+    padding: 0;
+    margin: 3px;
+}
+li.comments{
+    height: 30px;
+    width: 360px;
+    color: black;
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+
+}
+
 div.cardcomment{
     background-color: #f1f1f1;
     color: black;
     width: 400px;
-    height: 100px;
+    height: 50px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-
+    position: relative;
 }
-
+div.cardcomment_box{
+    background-color: gainsboro;
+    color: black;
+    width: 330px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    padding-right: 10px;
+}
+div.trashicon{
+    position: relative;
+    float:right;
+}
 div.cardcategories_photo {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -186,7 +251,17 @@ div.cardcategories_text {
     width: 400px;
     height: 200px;
 }
-
+input.texts{
+    position: absolute; 
+    top: 4px; 
+    left: 20px;
+    padding:3px;
+    display:block;
+    border:none;
+    background-color: inherit;
+    border-bottom:1px solid gray;
+    width:70%
+}
 footer {
     margin-right: -10px;
     margin-left: -10px;
@@ -246,7 +321,6 @@ div.centered {
     left: 50%;
     top: 43%;
     transform: translate(-50%, -50%);
-
 }
 
 h3.textcard{
@@ -273,27 +347,36 @@ section.cart{
     width: 70%;
     display: flex;
     flex-direction: column-reverse;
-    overflow: auto;
-   
-
-}
-section.payment{
-    width: 20%;
-    position: relative;
-    float: right;
-
-    position: sticky;
-    top: 0;
-}
-div.btnpayment{
-    background-color: coral;
-    height: 300px;
-    border-radius: 20px;
-    
-
+    overflow: auto; 
 }
 div.item{
     background-color: #F5DEB3;
     height: 200px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+section.payment{
+    width: 20%;
+    position: relative;
+    float: right;
+    position: sticky;
+    top: 0;
+}
+
+div.btnpayment{
+    background-color: coral;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+div.columb{
+    float: left; 
+    padding: 40px;
+    display: inline-block;
+}
+div.columb{
+    white-space: nowrap;
 }
