@@ -4,15 +4,13 @@ img.icon_xs {
 
 img.icon_s {
     height: 30px;
+    
 }
 
 img.icon_m {
     height: 40px;
-}
-
-b {
-    font-size: large;
-    font-weight: lighter;
+    padding: 0%;
+    margin: 0%;
 }
 
 a {
@@ -28,8 +26,8 @@ nav {
     position: relative;
     font-weight: bolder;
     margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -20px;
+    margin-right: -20px;
     background-color: #FF7F50;
     overflow: hidden;
 }
@@ -66,28 +64,6 @@ section.picture {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-div.row {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-div.column {
-    float: left;
-    width: 33%;
-
-    padding: 0 10px;
-    height: 300px;
-}
-
-div.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    text-align: center;
-    background-color: #f1f1f1
 }
 
 thead {
@@ -128,7 +104,7 @@ section.survey td.slider {
 }
 
 textarea {
-    background-color: aliceblue;
+    background-color: #f1f1f1;
     overflow: hidden;
     position: relative;
     left: 2%;
@@ -148,9 +124,67 @@ div.btn_b {
     background-color: #FF7F50;
     color: #f1f1f1;
     width: 400px;
-    height: 120px;
+    height: 125px;
     text-align: center;
     font-size: large;
+    position: relative;
+}
+div.btn_s {
+    border-radius: 10px;
+    background-color: #FF7F50;
+    color: #f1f1f1;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    left: 60%;
+    bottom: -10%;
+
+}
+
+div.cardcomments {
+    background-color: #f1f1f1;
+    color: black;
+    width: 400px;
+    height: 150px;
+    overflow: auto;
+}
+div.cardcomment{
+    background-color: #f1f1f1;
+    color: black;
+    width: 400px;
+    height: 100px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+
+div.cardcategories_photo {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    background-color: #f1f1f1;
+    width: 400px;
+    height: 250px;
+}
+
+div.cardcategories_mtext {
+    background-color: #F5DEB3;
+    position: relative;
+    color: black;
+    width: 400px;
+    height: 100px;
+}
+
+div.cardcategories_text {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #F5DEB3;
+    position: relative;
+    color: black;
+    width: 400px;
+    height: 200px;
 }
 
 footer {
@@ -159,7 +193,13 @@ footer {
     margin-bottom: -10px;
 }
 
-
+footer a{
+    color: #f1f1f1;
+    font-size: large;
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
+}
 
 div.dark_part {
     position: relative;
@@ -170,7 +210,7 @@ div.dark_part {
 div.textSummary {
     position: relative;
     background-color: #F5DEB3;
-    height: 450px;
+    height: 300px;
     padding: 10px 0;
 }
 
@@ -184,14 +224,12 @@ div.container {
     position: absolute;
     width: 80%;
     left: 10%;
-    text-align: center;
 }
 
 div.container2 {
     position: absolute;
     width: 60%;
     left: 20%;
-    text-align: center;
 }
 
 div.left {
@@ -206,15 +244,56 @@ div.centered {
     float: none;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 43%;
     transform: translate(-50%, -50%);
 
 }
 
-a.nav {
-    color: white;
-    font-size: x-large;
-    font-weight: lighter;
+h3.textcard{
+    position:relative; 
+    padding: 0%; 
+    margin: 0%; 
+    left: 5%; 
+    top: 5%;
+}
+a.btn{
     text-decoration: none;
-    text-align: center;
+    color: #f1f1f1;
+    font-size: xx-large;
+    line-height: 120px;
+}
+p.textcard{
+    position:relative; 
+    padding: 0%; 
+    margin: 0%; 
+    left: 5%; 
+    top: 5%;
+}
+section.cart{
+    width: 70%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: auto;
+   
+
+}
+section.payment{
+    width: 20%;
+    position: relative;
+    float: right;
+
+    position: sticky;
+    top: 0;
+}
+div.btnpayment{
+    background-color: coral;
+    height: 300px;
+    border-radius: 20px;
+    
+
+}
+div.item{
+    background-color: #F5DEB3;
+    height: 200px;
+    margin-bottom: 20px;
 }

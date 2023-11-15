@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf -8">
     <title>Online store</title>
-    <link rel="icon" type="image/x-icon" href="[DD][Tasklist] sIPF logo second drafts-04-modified.png">
-    <link rel="stylesheet" type="text/css" href="[oWEB][Project][1]Online_store.css">
-    <script src="onlines.js" type="text/javascript"></script>
+    <link rel="icon" type="image/x-icon" href="Resourses/shopping-cart.png">
+    <link rel="stylesheet" type="text/css" href="[oWEB][Project][1]style.css">
+    <!-- <script type="text/javascript" src="[oWEB][Project][1]script.js"></script> -->
 </head>
 
 <body>
-    <header class="main">
-        <a href="[DD][Tasklist] sIPF logo second drafts-04-modified.png">
-            <img src="[DD][Tasklist] sIPF logo second drafts-04-modified.png" alt="logo" width="100"> </a>
+    <header class="main" id="header">
+
+        <nav id="navbar">
+
+            <div class="left">
+                <a href='[oWEB][Project][1]landingPage.html' id=";">
+                    <img src="Resourses/user.png" alt="Login" class="icon_m">
+                </a>
+            </div>
+
+            <div class="centered">
+                <a href="[oWEB][Project][1]landingPage.html" class="nav"> <img src="Resourses/home.png" alt="."
+                        class="icon_s"> &ensp; Home </a>
+                <a href="[oWEB][Project][1]categories.html" class="nav">Categories</a>
+                <a href="[oWEB][Project][1]feedbackForm.html" class="nav">Feedback</a>
+                <a href="[oWEB][Project][1]contactForm.html" class="nav">Contact</a>
+            </div>
+
+            <div class="right">
+                <a href="[oWEB][Project][1]orders.html">
+                    <img src="Resourses/shopping-cart.png" alt="" class="icon_m">
+                </a>
+            </div>
+
+        </nav>
     </header>
-    <nav>
-        <a href="[oWEB][Project][1]Online_store.html#home">Home</a>
-        <a href="[oWEB][Project][1]Online_store.html#categories"> Categories</a>
-        <a href="[oWEB][Project][1]Online_store.html#pictures">Pictures</a>
-        <a href="[oWEB][Project][1]Online_store_feedback.html">Feedback</a>
-        <a href="[oWEB][Project][1]Online_store_contact.html">Contact</a>
-    </nav>
 
     <div style="height: 60px;"></div>
 
@@ -116,12 +130,46 @@
 
     <div style="height: 60px;"></div>
 
-    <footer class="basic" id="footer">
-        <ul>
-            <li>Адреса: Baraka 5, FEIT, Rugjer Boshkovik bb, Septemvriska Sesija 5, Skopje 1000</li>
-            <li>Телефон: 074 204 269</li>
-            <li>Социјални мрежи</li>
-        </ul>
+    <footer>
+        <div class="dark_part">
+            <div class="container">
+                <div class="left">
+                    <a href="tel:+389 74 204 269">
+                        <img src="Resourses/phone-call.png" alt="" class="icon_xs"> <b>+389 74 204 269</b>
+                    </a>
+                </div>
+
+                <div class="centered">
+                    <a href="mailto:gjorgji.kotlarovski@gmail.com">
+                        <img src="Resourses/envelope.png" alt="" srcset="" class="icon_xs">
+                        <b>gjorgji.kotlarovski@gmail.com</b>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="#"><img src="Resourses/facebook.png" alt="" srcset="" class="icon_s"></a>
+                    <a href="#"><img src="Resourses/instagram.png" alt="" srcset="" class="icon_s"></a>
+                    <a href="#"><img src="Resourses/linkedin.png" alt="" srcset="" class="icon_s"></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="light_part">
+            <div class="container2">
+
+                <div class="left">
+                    <address><img src="Resourses/marker.png" alt="" srcset="" class="icon_s">Faculty of Electrical
+                        Engineering
+                        and IT - Skopje</address>
+                </div>
+
+                <div class="right">
+                    <img src="Resourses/user.png" alt="" class="icon_s"> Gjorgji Kotlarovski
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
 </body>
