@@ -6,7 +6,7 @@
     <title>Online store</title>
     <link rel="icon" type="image/x-icon" href="Resourses/shopping-cart.png">
     <link rel="stylesheet" type="text/css" href="[oWEB][Project][1]style.css">
-    <!-- <script type="text/javascript" src="[oWEB][Project][1]script.js"></script> -->
+    <script type="text/javascript" src="[oWEB][Project][1]script.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <nav id="navbar">
 
             <div class="left">
-                <a href='[oWEB][Project][1]landingPage.html' id=";">
+                <a href='[oWEB][Project][1]landingPage.html' id=";" onclick="start()">
                     <img src="Resourses/user.png" alt="Login" class="icon_m">
                 </a>
             </div>
@@ -42,11 +42,13 @@
         <section class="payment">
             <div class="btnpayment">
                 <p style="height: 20px;"></p>
-                <h3>number of items:</h3>
-                    <h3>price:</h3>
-                    <h3>discount: </h3>
-                    <h3>total price: </h3>
-                    <div class="btn_s" style="background-color: azure; color: black; position: absolute; bottom: 20px; left: 80px;">payment</div>
+                <b>Number of items:</b> <span id="items">2</span> <br><p></p>
+                <b>Price MKD:</b> <span id="prix">12512</span> <br><p></p>
+                <b>Discount %:</b> <span id="discount">0</span> <br><p></p>
+                <b>Total price: </b> <span id="price"> 12512 </span> <br><p></p>
+                <div class="btn_s"
+                    style="background-color: azure; color: black; position: absolute; bottom: 20px; left: 80px;">payment
+                </div>
             </div>
         </section>
         <section class="cart">
@@ -61,7 +63,7 @@
                     <br>
                     <h2>Your order: </h2>
                     <br>
-                    
+
                     <span>uafisnjfsakjfsaiof masijhdsaouvmasdhui mhfauoi flh ofi aFBAHIUA L0 filbjfuhozxjiclk </span>
                 </div>
             </div>

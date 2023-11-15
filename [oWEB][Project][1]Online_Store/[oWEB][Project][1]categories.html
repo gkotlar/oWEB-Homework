@@ -6,7 +6,7 @@
     <title>Online store</title>
     <link rel="icon" type="image/x-icon" href="Resourses/shopping-cart.png">
     <link rel="stylesheet" type="text/css" href="[oWEB][Project][1]style.css">
-    <!-- <script type="text/javascript" src="[oWEB][Project][1]script.js"></script> -->
+    <script type="text/javascript" src="[oWEB][Project][1]script.js"></script>
 </head>
 
 <body>
@@ -15,8 +15,8 @@
         <nav id="navbar">
 
             <div class="left">
-                <a href='[oWEB][Project][1]landingPage.html' id=";">
-                    <img src="Resourses/user.png" alt="Login" class="icon_m">
+                <a href='[oWEB][Project][1]landingPage.html' id=";" onclick="start()">
+                    <img src="Resourses/user.png" alt="Login" class="icon_m" id="">
                 </a>
             </div>
 
@@ -39,14 +39,37 @@
 
     <div class="space"></div>
 
-    <section class="category" id="cat1" >
+    <section class="category" id="cat1">
         <div class="textSummary">
             <summary>
-                <h2 style="padding: 10px;">About us:</h2>
+                <h2 style="padding: 10px;">Graphic Design:</h2>
             </summary>
             <ul>
                 <li>
-                    texttext
+                    Graphic design, the art and profession of selecting and arranging visual elements—such as
+                    typography, images, symbols, and colours—to convey a message to an audience. Sometimes graphic
+                    design is called “visual communications,” a term that emphasizes its function of giving form—e.g.,
+                    the design of a book, advertisement, logo, or Web site—to information. An important part of the
+                    designer’s task is to combine visual and verbal elements into an ordered and effective whole.
+                    Graphic design is therefore a collaborative discipline: writers produce words and photographers and
+                    illustrators create images that the designer incorporates into a complete visual communication.
+
+                    The evolution of graphic design as a practice and profession has been closely bound to technological
+                    innovations, societal needs, and the visual imagination of practitioners. Graphic design has been
+                    practiced in various forms throughout history; indeed, strong examples of graphic design date back
+                    to manuscripts in ancient China, Egypt, and Greece. As printing and book production developed in the
+                    15th century, advances in graphic design developed alongside it over subsequent centuries, with
+                    compositors or typesetters often designing pages as they set the type.
+
+                    In the late 19th century, graphic design emerged as a distinct profession in the West, in part
+                    because of the job specialization process that occurred there, and in part because of the new
+                    technologies and commercial possibilities brought about by the Industrial Revolution. New production
+                    methods led to the separation of the design of a communication medium (e.g., a poster) from its
+                    actual production. Increasingly, over the course of the late 19th and early 20th centuries,
+                    advertising agencies, book publishers, and magazines hired art directors who organized all visual
+                    elements of the communication and brought them into a harmonious whole, creating an expression
+                    appropriate to the content. In 1922 typographer William A. Dwiggins coined the term graphic design
+                    to identify the emerging field.
                 </li>
             </ul>
         </div>
@@ -56,7 +79,9 @@
             <ul style="list-style-type: none; padding: 0; margin: 0;">
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://th.bing.com/th/id/OIP.TsCD8WLfNYKo2EyiFMyAXwHaHa?pid=ImgDet&rs=1); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
                             <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
                             <p style="padding-left: 10px;">common t-shirt</p>
@@ -77,7 +102,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart1" style=" padding-left: 10px;" onclick="heartchange()">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -87,10 +112,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(Resourses/[DD][Tasklist]\ sIPF\ logo\ second\ drafts-04-modified.png); background-size:contain; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Logo Design</b></span>
+                            <p style="padding-left: 10px;">common logos</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -108,7 +135,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart2" style="padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -118,10 +145,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/336/331/original/vector-web-page-design-template-for-web-page-design.jpg); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Web Page Design</b></span>
+                            <p style="padding-left: 10px;">Web page designsfa al loasf</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -139,7 +168,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart3" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -156,11 +185,30 @@
     <section class="category" id="cat2">
         <div class="textSummary">
             <summary>
-                <h2 style="padding: 10px;">About us:</h2>
+                <h2 style="padding: 10px;">Fare Finder:</h2>
             </summary>
             <ul>
                 <li>
-                    texttext
+                    Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their
+                    summer homes and villas in cities such as Pompeii and Baiae.[8] While early travel tended to be
+                    slower, more dangerous, and more dominated by trade and migration, cultural and technological
+                    advances over many years have tended to mean that travel has become easier and more accessible.[9]
+                    Humankind has come a long way in transportation since Christopher Columbus sailed to the New World
+                    from Spain in 1492, an expedition which took over 10 weeks to arrive at the final destination; to
+                    the 21st century when aircraft allows travel from Spain to the United States overnight.
+
+                    Travel in the Middle Ages offered hardships and challenges, though it was important to the economy
+                    and to society. The wholesale sector depended (for example) on merchants dealing with/through
+                    caravans or sea-voyagers, end-user retailing often demanded the services of many itinerant peddlers
+                    wandering from village to hamlet, gyrovagues (wandering monks) and wandering friars brought theology
+                    and pastoral support to neglected areas, traveling minstrels toured, and armies ranged far and wide
+                    in various crusades and in sundry other wars.[8] Pilgrimages were common in both the European and
+                    Islamic world and involved streams of travelers both locally and internationally.[10]
+
+                    In the late 16th century, it became fashionable for young European aristocrats and wealthy
+                    upper-class men to travel to significant European cities as part of their education in the arts and
+                    literature. This was known as the Grand Tour, and included cities such as London, Paris, Venice,
+                    Florence, and Rome. However, the French Revolution brought with it the end of the Grand Tour
                 </li>
             </ul>
         </div>
@@ -169,10 +217,12 @@
             <ul style="list-style-type: none; padding: 0; margin: 0;">
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://th.bing.com/th/id/R.8b077718a092fac8887da4f1a292affb?rik=E5b0U1mpgcinBA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f1%2f18%2fPikiWiki_Israel_3690_Scanya_Bus.JPG&ehk=8JWPKzyjFy8mfAMjGN%2bSOOssonDpYLZshg0ZJLhlyGg%3d&risl=&pid=ImgRaw&r=0); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Bus Tickets</b></span>
+                            <p style="padding-left: 10px;">cheap bus tickets</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -190,7 +240,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart4" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -200,10 +250,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://th.bing.com/th/id/R.2972da7fea1127556387961b04a05992?rik=I1SuxsgjdEXt0Q&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f2895396%2fimages%2fo-PLANE-facebook.jpg&ehk=Mgbi8aGJoTLqFkhvt5c4U7he8ogcq220wuKCjAgYT%2fo%3d&risl=&pid=ImgRaw&r=0); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Plane tickets</b></span>
+                            <p style="padding-left: 10px;">Cheap plane tickets</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -221,7 +273,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart5" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -231,10 +283,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://th.bing.com/th/id/OIP.aY26Yy-6ah-Ks9yb3fL_NQHaEK?pid=ImgDet&rs=1); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Whole journey planning</b></span>
+                            <p style="padding-left: 10px;">from 0 to all</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -252,7 +306,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart6" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -266,11 +320,30 @@
     <section class="category" id="cat3">
         <div class="textSummary">
             <summary>
-                <h2 style="padding: 10px;">About us:</h2>
+                <h2 style="padding: 10px;">Sparkling water:</h2>
             </summary>
             <ul>
                 <li>
-                    texttext
+                    Carbonated water (also known as soda water, bubbly water, sparkling water, fizzy water, club soda,
+                    water with gas, in many places as mineral water, or especially in the United States as seltzer or
+                    seltzer water) is water containing dissolved carbon dioxide gas, either artificially injected under
+                    pressure or occurring due to natural geological processes. Carbonation causes small bubbles to form,
+                    giving the water an effervescent quality. Common forms include sparkling natural mineral water, club
+                    soda, and commercially produced sparkling water.
+
+                    Club soda and sparkling mineral water and some other sparkling waters contain added or dissolved
+                    minerals such as potassium bicarbonate, sodium bicarbonate, sodium citrate, or potassium sulfate.
+                    These occur naturally in some mineral waters but are also commonly added artificially to
+                    manufactured waters to mimic a natural flavor profile and offset the acidity of introducing carbon
+                    dioxide gas giving one a fizzy sensation. Various carbonated waters are sold in bottles and cans,
+                    with some also produced on demand by commercial carbonation systems in bars and restaurants, or made
+                    at home using a carbon dioxide cartridge.
+
+                    It is thought that the first person to aerate water with carbon dioxide was William Brownrigg in the
+                    1740s.[3][4] Joseph Priestley invented carbonated water, independently and by accident, in 1767 when
+                    he discovered a method of infusing water with carbon dioxide after having suspended a bowl of water
+                    above a beer vat at a brewery in Leeds, England.[5] He wrote of the "peculiar satisfaction" he found
+                    in drinking it, and in 1772 he published a paper entitled Impregnating Water with Fixed Air.
                 </li>
             </ul>
         </div>
@@ -279,10 +352,12 @@
             <ul style="list-style-type: none; padding: 0; margin: 0;">
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://www.ebag.bg/en/products/587929/images/0/800); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Peliserka</b></span>
+                            <p style="padding-left: 10px;">Lorem Ipsum</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -300,7 +375,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart7" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -310,10 +385,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://online.idea.rs/images/products/470/470104840_1l.jpg?1540379564); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Knjaz Milosh</b></span>
+                            <p style="padding-left: 10px;">lorem impus</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -331,7 +408,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart8" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
@@ -341,10 +418,12 @@
                 </li>
                 <li>
                     <div class="columb">
-                        <div class="cardcategories_photo"></div>
+                        <div class="cardcategories_photo"
+                            style="background-image: url(https://th.bing.com/th/id/R.d641c453827e299ce8724fd395df53aa?rik=CBxl%2bmoFtAxOyw&pid=ImgRaw&r=0); background-size:cover; ">
+                        </div>
                         <div class="cardcategories_mtext">
-                            <span style="font-size: large; padding: 10px;"><b>T-shirt</b></span>
-                            <p style="padding-left: 10px;">common t-shirt</p>
+                            <span style="font-size: large; padding: 10px;"><b>Gorska</b></span>
+                            <p style="padding-left: 10px;">gorska voda</p>
                             <div class="btn_xs">Order</div>
                         </div>
 
@@ -362,7 +441,7 @@
                         </div>
 
                         <div class="cardcomment">
-                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart" style=" padding-left: 10px;">
+                            <img src="Resourses/heartEmpty.png" class="icon_s" id="Heart9" style=" padding-left: 10px;">
                             <div class="cardcomment_box">
                                 <input type="text" name="" id="" class="texts">
                                 <div class="btn_xs" id="postbtn">SEND</div>
