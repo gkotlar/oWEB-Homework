@@ -1,22 +1,30 @@
-function setImage() { //js for the picture change
-    if (numFalseGuesses <= numMaxGuesses) {
-        iconImg = document.getElementById("hangmanPic");
-        iconImg.setAttribute("src", "resourses/pictures/hangman" + numFalseGuesses + ".png");
-        iconImg.setAttribute("alt", "hangman" + numFalseGuesses);
-    }
-}
-// window.addEventListener("click", start, false);
 
 function start() {
     let person = prompt("Please enter your username", "Harry ");
     let pass = prompt("Please enter your password", " Potter");
 }
-var counter = 0;
-function heartchange() {
-    if (document.getElementById("Heart1").src == "Resourses/heartEmpty.png") {
-        document.getElementById("Heart1").src = "Resourses/heartFull.png";
-    }
-    else {
-        document.getElementById("Heart1").src = "Resourses/heartEmpty.png";
-    }
+var counter = 1;
+var items = 9;
+function heartchange(i) {
+    iconImg = document.getElementById("Heart"+i);
+    var sours = iconImg.getAttribute("src");
+    if (sours == "Resourses/heartEmpty.png"){
+        iconImg.setAttribute("src", "Resourses/heartFull.png");}
+    else{
+        iconImg.setAttribute("src", "Resourses/heartEmpty.png");}
 }
+function addComment(i) {
+    send = document.getElementById("send"+i);
+    text = document.getElementById("text"+i);
+
+    com = text.value;
+
+    document.getElementById("text"+i).value = '';
+
+    const node = document.createElement("li");
+    node.setAttribute("class", "comments");
+    const textnode = document.createTextNode(com);
+    node.appendChild(textnode);
+    document.getElementById("ul"+i).appendChild(node);
+}
+
