@@ -74,9 +74,9 @@
                 <button ngbDropdownToggle type="button" class="nav-link">Contact</button>
 
                 <div ngbDropdownMenu class="dropdown-menu-end">
-                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/contact']"
-                        (click)="collapsed = true">For Companies</button>
                     <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/contact-companies']"
+                        (click)="collapsed = true">For Companies</button>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/contact']"
                         (click)="collapsed = true">For Students</button>
                 </div>
 

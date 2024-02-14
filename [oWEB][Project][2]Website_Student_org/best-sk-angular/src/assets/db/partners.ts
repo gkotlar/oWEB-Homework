@@ -288,13 +288,13 @@ export const PARTNERS: Entity[] = [
 //
 
     {
-        type: "Sponsors",
+        type: "sponsor",
         picture: "/",
         link: "/",
         name: "Teteks",
     },
     {
-        type: "Sponsors",
+        type: "sponsor",
         picture: "/",
         link: "/",
         name: "Ana Kristi",
@@ -308,20 +308,20 @@ export const PARTNERS: Entity[] = [
 //
 
     {
-        type: "Media",
+        type: "media",
         picture: "/",
         link: "/",
         name: "MRT",
     },
     {
-        type: "Media",
+        type: "media",
         picture: "/",
         link: "/",
         name: "Telma",
     },
 
     {
-        type: "Media",
+        type: "media",
         picture: "/",
         link: "/",
         name: "Telma",
@@ -334,13 +334,13 @@ export const PARTNERS: Entity[] = [
 //
 //
 {
-    type: "Friends",
+    type: "friend",
     picture: "/",
     link: "/",
     name: "FSS FEIT",
 },
 {
-    type: "Friends",
+    type: "friend",
     picture: "/",
     link: "/",
     name: "USS UKIM",
