@@ -1,0 +1,39 @@
+<div class="card flip-card" style="width: 12rem; margin: 20px;">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+
+            <img src="{{person.picture}}" class="card-img-top" alt="photo of {{person.name}}"
+                onerror="this.src='assets/photos/person_unknown.jpg';" />
+
+            <div class="card-body">
+                <p class="card-text"><b> {{person.name}} </b></p>
+
+                <p class="card-text">{{person.role}}</p>
+
+                <div>
+                    <a href="http://www.best-eu.org">
+                        <img src="../../../../assets/svg/BEST_logo.svg" alt="logo" height="40px">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <h4 style="padding-top: 2rem;"> {{person.name}} </h4>
+            <h6> {{person.role}} </h6>
+            <div style="padding-top: 20px; padding-bottom: 20px;">
+                <p>Contact:</p>
+
+                <a href="mailto:{{person.mail}}" placement="end" ngbTooltip="Send a mail to {{person.mail}}">
+                    <img src="../../../../assets/svg/envelope-fill.svg" alt="E-Mail address" height="40px">
+                </a>
+            </div>
+            <div>
+                <a href="{{person.link}}" placement="end" ngbTooltip="LinkedIn">
+                    <img src="../../../../assets/svg/linkedin.svg" alt="linkedin profile" height="40px">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>

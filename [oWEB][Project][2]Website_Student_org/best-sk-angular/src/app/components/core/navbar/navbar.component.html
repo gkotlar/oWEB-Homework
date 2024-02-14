@@ -1,0 +1,171 @@
+<header ngbNav #nav="ngbNav" class="navbar navbar-expand-lg navbar-light bg-light px-4 ">
+
+    <a class="navbar-brand me-md-2 me-0" routerLink="/">
+        <img height="50" src="assets/svg/BEST_logo.svg" alt="BEST Skopje">
+
+    </a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarContent" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+        aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+        <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class=" navbar-collapse ms-auto" [class.collapse]="collapsed" id="navbarContent">
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item active nav-pills">
+                <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/home']"
+                    (click)="collapsed = true">Home</a>
+            </li>
+
+            <li ngbDropdown class="nav-item">
+                <button ngbDropdownToggle type="button" class="nav-link" >Projects</button>
+
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/projects']"
+                        (click)="collapsed = true">All Projects </button>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a ngbDropdownItem target="_blank" rel="noopener noreferrer"
+                        href="https://vjobfair.org.mk/">
+                        Job Fair (redirect)</a>
+                    <a ngbDropdownItem target="_blank" rel="noopener noreferrer"
+                        href="https://hackathon.best.org.mk/">
+                        Competitions (redirect)</a>
+                    <a ngbDropdownItem target="_blank" rel="noopener noreferrer"
+                        href="https://summer24.best.org.mk/">
+                        Summer Events (redirect)</a>
+                </div>
+
+            </li>
+
+            <li ngbDropdown class="nav-item">
+
+                <button ngbDropdownToggle type="button" class="nav-link" >About us</button>
+
+                <div ngbDropdownMenu>
+
+                    <a href="https://best.eu.org/index.jsp" target="_blank" rel="noopener noreferrer"
+                        ngbDropdownItem>About BEST (redirect)</a>
+
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/aboutUs']"
+                        (click)="collapsed = true">About LBG Skopje</button>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/partners']"
+                        (click)="collapsed = true">Partners </button>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/members']"
+                        (click)="collapsed = true">Full Members</button>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/alumni']"
+                        (click)="collapsed = true">Alumni</button>
+                    <div class="dropdown-divider"></div>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/documents']"
+                        (click)="collapsed = true">Documents</button>
+                </div>
+            </li>
+
+            <li class="nav-item nav-pills">
+                <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/blog']"
+                    (click)="collapsed = true">Blog</a>
+            </li>
+
+            <li ngbDropdown class="nav-item" role="presentation">
+                <button ngbDropdownToggle type="button" class="nav-link">Contact</button>
+
+                <div ngbDropdownMenu class="dropdown-menu-end">
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/contact']"
+                        (click)="collapsed = true">For Companies</button>
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/contact-companies']"
+                        (click)="collapsed = true">For Students</button>
+                </div>
+
+            </li>
+
+        </ul>
+        <div class="mt-2"></div>
+    </div>
+</header>
+
+<!-- <nav>
+    <ul ngbNav #nav="ngbNav" [activeId]="2" class="nav-tabs navbar-dark justify-content-center">
+        <li [ngbNavItem]="0">
+            <img height="50" src="favicon.ico" alt="BEST Skopje" ngbNavLink>
+            <ng-template ngbNavContent>
+                <p>
+                    Home
+                </p>
+            </ng-template>
+        </li>
+            <li [ngbNavItem]="1" class="ms-auto">
+                <button ngbNavLink>Home</button>
+                <ng-template ngbNavContent>
+                    <p>
+                        Home
+                    </p>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2" ngbDropdown class="nav-item" role="presentation">
+                <button ngbNavLink type="button" class="nav-link" ngbDropdownToggle>Projects</button>
+                <ng-template ngbNavContent>
+                    <p>
+                        Projects
+                    </p>
+                </ng-template>
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem>Job Fair</button>
+                    <button ngbDropdownItem>Competitions</button>
+                    <button ngbDropdownItem>Summer Events</button>
+                </div>
+            </li>
+            <li [ngbNavItem]="3" ngbDropdown class="nav-item" role="presentation">
+                <button type="button" class="nav-link" ngbDropdownToggle>About us</button>
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem>About BEST</button>
+                    <button ngbDropdownItem>About LBG Skopje</button>
+                    <button ngbDropdownItem>Partners</button>
+                    <button ngbDropdownItem>Full Members</button>
+                    <button ngbDropdownItem>Alumni</button>
+                    <div class="dropdown-divider"></div>
+                    <button ngbDropdownItem>Documents</button>
+                </div>
+            </li>
+            <li [ngbNavItem]="4">
+                <button ngbNavLink>Blog</button>
+                <ng-template ngbNavContent>
+                    <p>
+                        Blog
+                    </p>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="5" ngbDropdown class="nav-item" role="presentation" ngbNavItem [disabled]="false">
+                <button ngbNavLink type="button" class="nav-link" ngbDropdownToggle>Contact</button>
+                <ng-template ngbNavContent>
+                    <p>
+                        Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.
+                        Nulla facilisi.
+                        Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu,
+                        congue et odio.
+                        Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et.
+                        Sed
+                        diam urna,
+                        egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus
+                        nisl
+                        enim, nec
+                        tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque
+                        penatibus et
+                        magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet
+                        ultricies
+                        in eget
+                        neque. Phasellus nec tortor vel tellus pulvinar feugiat.
+                    </p>
+                </ng-template>
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem>For Students</button>
+                    <button ngbDropdownItem>For Companies</button>
+                </div>
+            </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</nav> -->

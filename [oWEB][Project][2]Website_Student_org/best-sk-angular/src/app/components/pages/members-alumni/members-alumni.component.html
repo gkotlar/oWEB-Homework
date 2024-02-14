@@ -1,0 +1,12 @@
+<div style="text-align: center;">
+    <h2 style="margin: 50px;">Alumni of BEST Skopje</h2>
+    <div>
+        @for (member of members_db; track $index;){
+            @if (member.type=="4") {
+               <p>{{member.name}}</p>
+            }
+        }
+    </div>
+
+    <hr>
+</div>

@@ -1,0 +1,11 @@
+<div style="text-align: center; background-color: ivory; padding-top: 40px; padding-bottom: 40px;">
+    <span style="font-size: 25px;"><b>FOLLOW US ON:</b></span>
+    <div style="margin: 30px;">
+        @for(item of socialmediadb; track item.name){
+        <a href="{{item.link}}">
+            <img src="../../../../{{item.picture}}" alt="{{item.name}}" ngbTooltip="{{item.name}}" width="40px" style="margin: 20px; ">
+        </a>
+        }
+    </div>
+    BEST Skopje 2024 | <span>Privacy Policy</span>
+</div>
