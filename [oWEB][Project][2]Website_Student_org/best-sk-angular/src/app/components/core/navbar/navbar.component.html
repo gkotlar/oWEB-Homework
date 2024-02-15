@@ -24,7 +24,7 @@
                 <button ngbDropdownToggle type="button" class="nav-link" >Projects</button>
 
                 <div ngbDropdownMenu>
-                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/projects']"
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [disabled]="true" [routerLink]="['/projects']"
                         (click)="collapsed = true">All Projects </button>
 
                     <div class="dropdown-divider"></div>
@@ -51,7 +51,7 @@
                     <a href="https://best.eu.org/index.jsp" target="_blank" rel="noopener noreferrer"
                         ngbDropdownItem>About BEST (redirect)</a>
 
-                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/aboutUs']"
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [disabled]="true" [routerLink]="['/aboutUs'] "
                         (click)="collapsed = true">About LBG Skopje</button>
                     <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/partners']"
                         (click)="collapsed = true">Partners </button>
@@ -60,7 +60,7 @@
                     <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/alumni']"
                         (click)="collapsed = true">Alumni</button>
                     <div class="dropdown-divider"></div>
-                    <button ngbDropdownItem [routerLinkActive]="['active']" [routerLink]="['/documents']"
+                    <button ngbDropdownItem [routerLinkActive]="['active']" [disabled]="true" [routerLink]="['/documents']"
                         (click)="collapsed = true">Documents</button>
                 </div>
             </li>

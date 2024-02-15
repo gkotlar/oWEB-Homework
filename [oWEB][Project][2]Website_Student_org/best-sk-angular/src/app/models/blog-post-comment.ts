@@ -1,6 +1,8 @@
 export interface BlogPostComment {
-    name:string;
-    comment:string;
-    timestamp:number;
-    likes:number;
+    name:any;
+    email:any
+    message:any;
+    blogid:any;
+    timestamp:any;
+    likes:any;
 }

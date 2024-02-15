@@ -1,3 +1,105 @@
 <div style="text-align: center;">
-    <p style="height: 400px; line-height: 400px; font-weight: bold;">This site is under construction</p>
+    @if (photos) {
+    <ngb-carousel>
+        @for (item of photos; track $index) {
+        <ng-template ngbSlide>
+            <div ngbTooltip="{{item.name}}">
+
+                <div style="height: 100%;">
+                    <img [src]="item.picture" [alt]="item.name" style="width: 100%; max-height: 700px">
+                </div>
+
+                <div class="carousel-caption">
+                    <h3> {{item.name}} </h3>
+                </div>
+
+            </div>
+        </ng-template>
+        }
+
+        
+    </ngb-carousel>
+    }
+    <article class="flex_parent">
+        <div style="width: 70%;">
+            <h1>Who we are</h1>
+            <p>Local BEST group Skopje (LBG Skopje) is a member of a huge network of over 93 local BEST groups from
+                universities all over Europe. We strive to help students develop their potentials and to become more
+                internationally minded. Our members have an opportunity to improve themselves through working and
+                participating in numerous projects we organize. From FR, PR, HR and IT our sectors provide much needed
+                experience, practical and soft skills for students. We organize academic courses and many other events
+                all
+                over Europe, which gives students an ability to travel and meet new cultures at minimal cost.
+            </p>
+        </div>
+    </article>
+
+    <hr>
+
+    <article class="row" style="margin: 30px;">
+        <div class="col-md-6">
+            <h1>Mission</h1>
+            <h2>DEVELOPING STUDENTS</h2>
+
+            <p>
+                BEST helps students to achieve an international mindset, to reach a better understanding of cultures and
+                societies and to develop the capacity to work in culturally diverse environments. BEST creates
+                opportunities for personal development of students andsupports them in reaching their full potential.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="col-md-6">
+            <h1>Vision</h1>
+            <h2> EMPOWERED DIVERSITY </h2>
+
+            <p>
+                People understand and respect different cultures and societies. The environment of empowered diversity
+                supports people in applying their full potential and acting responsibly.
+            </p>
+        </div>
+    </article>
+
+    <hr>
+
+    <article style="background-color:blanchedalmond;">
+        <div class="row" style=" padding: 30px;">
+
+            <div class="col-md-8">
+                <img src="../../../../assets/photos/map.png" style="width: 100%;">
+            </div>
+
+            <div class=" col-md-4" style="padding-top: 60px; padding-bottom: 60px;">
+                <h2> About BEST Skopje</h2>
+                <p>
+                    We are a specific group of motivated volunteers with a strong focus and a clear mission. We live and
+                    breathe BEST spirit which encompasses professional and personal improvement, developing
+                    interculturality, practicing team work and organizing events. We treasure and value a sense of
+                    community
+                    and belonging, holding together through all adversities of student life like one big family
+                    maintaining
+                    motivation in innovative and fun ways, for who works a lot deserves to party a lot!
+                </p>
+
+                <a href="https://www.best-eu.org/skopje" class="btn btn-outline-primary" type="button">
+                    Learn more
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <hr>
+    <div style="padding: 100px;">
+        <a href="https://best.org.mk/forma-za-apliciranje/" class="btn btn-success btn-lg" type="button">
+            Join Now
+        </a>
+    </div>
+    
 </div>

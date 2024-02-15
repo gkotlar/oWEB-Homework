@@ -1,7 +1,7 @@
 import { BlogPostComment } from "./blog-post-comment";
 
 export interface BlogPostItem {
-    id:number;
+    id:any;
 
     title:string;
     picture:string;
@@ -10,7 +10,7 @@ export interface BlogPostItem {
     timestamp:string;
 
     text:string;
-    likes:number;
+    likes:any;
 
     comments:any;
 

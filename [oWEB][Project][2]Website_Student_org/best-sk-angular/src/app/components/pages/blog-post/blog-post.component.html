@@ -12,21 +12,81 @@
             <hr>
             {{blogPost.text}}
             <hr>
+            <div style="display: flex; justify-content:space-between">
+                <small>Uploaded on: {{blogPost.timestamp | date: 'medium'}} </small>
+                <button type="button" class="btn btn-sm btn-outline-danger" (click)="addLikeTemp()"><small> Likes:
+                        {{ blogPost.likes-1+1+state}}</small></button>
+            </div>
         </div>
 
         <div class="card-footer">
             <b>Comments: </b>
             <hr>
             <div>
-                
+                @if (blogPostCommentList) {
+                @for (item of blogPostCommentList; track $index ) {
+                @if (item.blogid == this.route.snapshot.params["id"]) {
+                <b>{{item.name}}</b> says:
+                <p>{{item.message}}</p>
+                <div style="display: flex; justify-content:space-between">
+
+                    <small>Uploaded on: {{item.timestamp | date: 'medium'}} </small>
+                    <div>
+                        <button class="btn btn-sm btn-outline-danger" type="button"(click)="addLikeTemp()"><small> Likes:
+                                {{item.likes-1+1+state}}</small></button>
+                        <button class="btn btn-sm btn-danger" style="margin: 10px;" type="button" (click)="removeCommentById(item.email, item.timestamp)"><small> Delete</small></button>
+                    </div>
+                </div>
+                <hr>
+                }
+                }@empty {Be the fort to leave a comment}
+                }@else {Error could not load comments}
             </div>
         </div>
 
     </article>
 </div>
+
+<div style="display: flex; justify-content: center;">
+    <article class="card w-75" style="margin-top: 50px; margin-bottom: 50px;">
+
+        <form [formGroup]="commentForm" (submit)="submitComment()">
+
+            <div style="text-align: center;">
+                <h1 class="card-header" style="padding: 30px;">Leave comment</h1>
+                <hr>
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    <textarea name="" id="message" placeholder="Message" formControlName="fmessage"></textarea>
+                </p>
+
+                <div style="display: flex; justify-content:space-between">
+
+                    <input id="name" type="text" placeholder="Name: " formControlName="fname">
+
+
+                    <input id="email" type="email" placeholder="E-mail:" formControlName="femail">
+
+                </div>
+
+
+            </div>
+
+            <div class="card-footer" style="display: flex; justify-content: end;">
+                <button type="submit" class="btn btn-primary" style="margin: 20px;"> Submit now </button>
+            </div>
+        </form>
+    </article>
+</div>
+
 <div style="display: flex; justify-content: center;">
     <button type="button" class="btn btn-primary" style="margin-bottom: 100px;" routerLink="/blog"> Go Back</button>
 </div>
+
+
 
 
 }

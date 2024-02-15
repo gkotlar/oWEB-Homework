@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BlogPostItem } from '../../../models/blog-post-item';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({

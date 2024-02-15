@@ -1,0 +1,19 @@
+input {
+    padding: 20px;
+    border: 1px solid #99B2B7;
+    border-radius: 0;
+    font-size: 1em;
+    width: 48%;
+    }
+input.error {
+    border-color: #dd6666;
+    background-color: red;
+    }
+
+textarea{
+    width:100%;
+    min-height: 200px;
+    border: 1px solid #99B2B7;
+    border-radius: 0;
+    font-size: 1em;
+}

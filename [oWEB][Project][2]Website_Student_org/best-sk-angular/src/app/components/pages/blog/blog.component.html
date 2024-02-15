@@ -1,6 +1,44 @@
-<div style="text-align: center; ">
-    <div style="padding: 20px;"><h1>Blog of BEST Skopje</h1></div>
-    @for (item of blogPostList; track item.id) {
+<div style="padding: 20px; text-align: center;">
+    <h1>Blog of BEST Skopje</h1>
+</div>
+
+<div style=" display: flex; justify-content: center;">
+
+    <div>
+        
+        @for (item of blogPostList; track item.id) {
         <app-card-blog [post]=item></app-card-blog>
-    }
+        }
+    </div>
+
+    <div>
+        <div class="card" style="margin: 20px; position: sticky; top:30px" >
+            <form [formGroup]="blogForm" (submit)="createPost()">
+
+                <div style="text-align: center;">
+                    <h1 class="card-header" style="padding: 30px;">Create a post</h1>
+                    <hr>
+                </div>
+
+                <div class="card-body" style="display: flex; flex-direction: column;">
+
+                    <input id="id" type="text"  placeholder="id" formControlName="fid">
+
+                    <input id="title" type="text" placeholder="Name: " formControlName="ftitle">
+
+                    <input id="picture" type="text" placeholder="Picture:" formControlName="fpicture">
+
+                    <input id="description" type="text" placeholder="description" formControlName="fdescription">
+
+                    <input id="text" type="text" placeholder="text:" formControlName="ftext">
+
+
+                </div>
+
+                <div class="card-footer" style="display: flex; justify-content: end;">
+                    <button type="submit" class="btn btn-primary" style="margin: 20px;"> Submit now </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
