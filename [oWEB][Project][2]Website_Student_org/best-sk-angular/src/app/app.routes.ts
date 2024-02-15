@@ -9,6 +9,7 @@ import { BlogComponent } from './components/pages/blog/blog.component';
 import { DocumentsComponent } from './components/pages/documents/documents.component';
 import { ContactCompaniesComponent } from './components/pages/contact-companies/contact-companies.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { BlogPostComponent } from './components/pages/blog-post/blog-post.component';
 
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
     {path:'documents', component:DocumentsComponent},
 
     {path:'blog', component:BlogComponent},
+    {path:'blog/:id', component:BlogPostComponent},
 
     {path:'contact', component:ContactComponent},
     {path:'contact-companies', component:ContactCompaniesComponent},

@@ -3,7 +3,7 @@
 
     <h2>Local Board</h2>
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (member of members_db; track $index;){
+        @for (member of membersList; track $index;){
             @if (member.type=="0") {
                 <app-card-people [person]="member" />
             }
@@ -14,7 +14,7 @@
 
     <h2>Non-Boardies</h2>
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (member of members_db; track $index;){
+        @for (member of membersList; track $index;){
             @if (member.type=="1") {
                 <app-card-people [person]="member" />
             }
@@ -25,7 +25,7 @@
 
     <h2>Project Coordinators</h2>
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (member of members_db; track $index;){
+        @for (member of membersList; track $index;){
             @if (member.type=="2") {
                 <app-card-people [person]="member" />
             }
@@ -38,7 +38,7 @@
 
     <div>
         
-        @for (member of members_db; track $index;){
+        @for (member of membersList; track $index;){
             @if (member.type!="4") {
                 <p> {{member.name}} </p>
             }

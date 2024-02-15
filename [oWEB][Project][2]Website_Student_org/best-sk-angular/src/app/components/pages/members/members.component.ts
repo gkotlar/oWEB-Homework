@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CardPeopleComponent } from '../../cards/card-people/card-people.component';
-import { MEMBERS } from '../../../../assets/db/members'; 
+import { Person } from '../../../models/person';
+import { MembersService } from '../../../services/members.service';
 
 @Component({
   selector: 'app-members',
@@ -10,5 +11,10 @@ import { MEMBERS } from '../../../../assets/db/members';
   styleUrl: './members.component.css'
 })
 export class MembersComponent {
-  members_db = MEMBERS;
+  membersList : Person[] = [];
+  membersService : MembersService = inject(MembersService);
+
+  constructor(){
+    this.membersList=this.membersService.getAllMembers();
+  }
 }

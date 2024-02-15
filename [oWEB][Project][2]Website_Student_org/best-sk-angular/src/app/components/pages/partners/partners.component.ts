@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CardEntetiesComponent } from '../../cards/card-enteties/card-enteties.component';
-import { PARTNERS } from '../../../../assets/db/partners';
+import { Entity } from '../../../models/entity';
+import { PartnersService } from '../../../services/partners.service';
 
 @Component({
   selector: 'app-partners',
@@ -10,5 +11,10 @@ import { PARTNERS } from '../../../../assets/db/partners';
   styleUrl: './partners.component.css'
 })
 export class PartnersComponent {
-  partners_db = PARTNERS;
+  partnerList : Entity[] = [];
+  partnerService : PartnersService = inject(PartnersService);
+
+  constructor(){
+    this.partnerList=this.partnerService.getAllPartners();
+  }
 }

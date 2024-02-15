@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MEMBERS } from '../../../../assets/db/members';
+import { Component, inject } from '@angular/core';
+import { Person } from '../../../models/person';
+import { MembersService } from '../../../services/members.service';
 
 
 @Component({
@@ -10,5 +11,9 @@ import { MEMBERS } from '../../../../assets/db/members';
   styleUrl: './members-alumni.component.css'
 })
 export class MembersAlumniComponent {
-  members_db = MEMBERS;
-}
+  membersList : Person[] = [];
+  membersService : MembersService = inject(MembersService);
+
+  constructor(){
+    this.membersList=this.membersService.getAllMembers();
+  }}

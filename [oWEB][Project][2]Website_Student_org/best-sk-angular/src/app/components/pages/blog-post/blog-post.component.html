@@ -1,1 +1,41 @@
-<p>blog-post works!</p>
+@if (blogPost) {
+<div style="display: flex; justify-content: center;">
+    <article class="card w-75" style="margin-top: 50px; margin-bottom: 50px;">
+        <div style="text-align: center;">
+            <h1 class="card-header" style="padding: 30px;">{{blogPost.title}}</h1>
+            <img [src]="blogPost.picture" alt="" style="max-height: 500px; padding: 30px;">
+            <hr>
+        </div>
+
+        <div class="card-body">
+            {{blogPost.description}}
+            <hr>
+            {{blogPost.text}}
+            <hr>
+        </div>
+
+        <div class="card-footer">
+            <b>Comments: </b>
+            <hr>
+            <div>
+                
+            </div>
+        </div>
+
+    </article>
+</div>
+<div style="display: flex; justify-content: center;">
+    <button type="button" class="btn btn-primary" style="margin-bottom: 100px;" routerLink="/blog"> Go Back</button>
+</div>
+
+
+}
+@else {
+<div style="text-align: center;">
+    <h3 style="height: 300px; line-height: 300px; ">
+        The requested page does not exist.
+    </h3>
+    <button type="button" class="btn btn-primary" style="margin-bottom: 100px;" routerLink="/blog"> Go Back</button>
+
+</div>
+}

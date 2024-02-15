@@ -1,1 +1,21 @@
-<p>card-blog works!</p>
+<div class="card mb-3" style="max-width: 1000px;">
+    <div class="row g-0">
+        <div class="col-md-3">
+            <img src="{{post.picture}}" class="img-fluid rounded-start" alt="{{post.title}}">
+        </div>
+        <div class="col-md-9 text-start">
+            <div class="card-body">
+                <h2 class="card-title">{{post.title}}</h2>
+                <p class="card-text" style="overflow: auto;"> {{post.description}} </p>
+                <div class="d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary" [routerLink]="['/blog', post.id]"> Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <small class="text-muted"> Uploaded: {{post.timestamp}}</small>
+            <small class="text-muted"> Likes: {{post.likes}} </small>
+
+        </div>
+    </div>
+</div>

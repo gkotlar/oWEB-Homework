@@ -3,7 +3,7 @@
     <h2>Annual Partners</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="annual") {
                 <app-card-enteties [ent]=item />
             }
@@ -15,7 +15,7 @@
     <h2>Corporate Partners</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="partner") {
                 <app-card-enteties [ent]=item />
             }
@@ -27,7 +27,7 @@
     <h2>Sponsors</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="sponsor") {
                 <app-card-enteties [ent]=item />
             }
@@ -39,7 +39,7 @@
     <h2>Media Partners</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="media") {
                 <app-card-enteties [ent]=item />
             }
@@ -51,7 +51,7 @@
     <h2>Friends</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="friend") {
                 <app-card-enteties [ent]=item />
             }
@@ -63,7 +63,7 @@
     <h2>Faculty Support</h2>
 
     <div style="display: flex; justify-content: center; flex-flow: row wrap;">
-        @for (item of partners_db; track $index) {
+        @for (item of partnerList; track $index) {
             @if (item.type=="faculty") {
                 <app-card-enteties [ent]=item />
             }
