@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/aboutUs",
+    "/alumni",
+    "/blog",
+    "/contact",
+    "/contact-companies",
+    "/documents",
+    "/home",
+    "/members",
+    "/partners",
+    "/projects"
+  ]
+}
