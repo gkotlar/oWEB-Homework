@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 
 ## GitHub Pages
-Follow this link to check the app on GitHub Pages: (https://gkotlar.github.io/oWEB/home/).
+Follow this link to check the app on GitHub Pages: [https://gkotlar.github.io/oWEB/home/].
 The page isn't properly uploaded on the web, there are several issues with the routing and pictures. But they work locally.
 
 
