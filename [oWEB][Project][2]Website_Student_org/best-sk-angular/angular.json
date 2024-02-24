@@ -96,6 +96,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "best-sk-angular:build:production",
+              "serveTarget": "best-sk-angular:serve:production"
+            },
+            "development": {
+              "buildTarget": "best-sk-angular:build:development",
+              "serveTarget": "best-sk-angular:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

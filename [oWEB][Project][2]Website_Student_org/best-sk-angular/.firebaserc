@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "best-sk-angular": {
+      "hosting": {
+        "best-sk-angular": [
+          "best-sk-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "best-sk-angular"
+  }
+}

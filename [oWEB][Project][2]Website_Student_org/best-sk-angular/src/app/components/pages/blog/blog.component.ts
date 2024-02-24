@@ -4,16 +4,18 @@ import { POSTS } from '../../../../assets/db/blogs';
 import { BlogService } from '../../../services/blog.service';
 import { BlogPostItem } from '../../../models/blog-post-item';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CardBlogComponent, ReactiveFormsModule],
+  imports: [CardBlogComponent, ReactiveFormsModule, AsyncPipe],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
-  blogPostList:BlogPostItem[] = [];
+  blogPostList: Observable<BlogPostItem[]>;
   blogService : BlogService = inject(BlogService);
 
   constructor() {

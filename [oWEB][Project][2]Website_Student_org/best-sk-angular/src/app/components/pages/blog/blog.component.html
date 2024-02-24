@@ -2,43 +2,46 @@
     <h1>Blog of BEST Skopje</h1>
 </div>
 
-<div style=" display: flex; justify-content: center;">
+<div class="container-fluid">
+    <div class="row">
 
-    <div>
-        
-        @for (item of blogPostList; track item.id) {
-        <app-card-blog [post]=item></app-card-blog>
-        }
-    </div>
+        <div class=" col-xl-8">
+            @for (item of blogPostList | async; track item.id) {
+            <app-card-blog [post]=item></app-card-blog>
+            }
+        </div>
 
-    <div>
-        <div class="card" style="margin: 20px; position: sticky; top:30px" >
-            <form [formGroup]="blogForm" (submit)="createPost()">
+        <div class=" col-xl-4">
 
-                <div style="text-align: center;">
-                    <h1 class="card-header" style="padding: 30px;">Create a post</h1>
-                    <hr>
-                </div>
+            <div class="card" style="position: sticky; top:30px">
+                <form [formGroup]="blogForm" (submit)="createPost()">
 
-                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <div style="text-align: center;">
+                        <h1 class="card-header" style="padding: 30px;">Create a post</h1>
+                        <hr>
+                    </div>
 
-                    <input id="id" type="text"  placeholder="id" formControlName="fid">
+                    <div class="card-body" style="display: flex; flex-direction: column;">
 
-                    <input id="title" type="text" placeholder="Name: " formControlName="ftitle">
+                        <input id="id" type="text" placeholder="id" formControlName="fid">
 
-                    <input id="picture" type="text" placeholder="Picture:" formControlName="fpicture">
+                        <input id="title" type="text" placeholder="Name: " formControlName="ftitle">
 
-                    <input id="description" type="text" placeholder="description" formControlName="fdescription">
+                        <input id="picture" type="text" placeholder="Picture:" formControlName="fpicture">
 
-                    <input id="text" type="text" placeholder="text:" formControlName="ftext">
+                        <input id="description" type="text" placeholder="description" formControlName="fdescription">
+
+                        <input id="text" type="text" placeholder="text:" formControlName="ftext">
 
 
-                </div>
+                    </div>
 
-                <div class="card-footer" style="display: flex; justify-content: end;">
-                    <button type="submit" class="btn btn-primary" style="margin: 20px;"> Submit now </button>
-                </div>
-            </form>
+                    <div class="card-footer" style="display: flex; justify-content: end;">
+                        <button type="submit" class="btn btn-primary" style="margin: 20px;"> Submit now </button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
 </div>

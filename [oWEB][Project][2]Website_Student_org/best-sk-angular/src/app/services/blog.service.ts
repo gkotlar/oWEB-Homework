@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { BlogPostItem } from '../models/blog-post-item';
 import { BlogPostComment } from '../models/blog-post-comment';
 import { POSTS } from '../../assets/db/blogs';
 import { COMMENTS } from '../../assets/db/comments';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +15,20 @@ export class BlogService {
 
   protected blogPostCommentsList = COMMENTS;
 
-  constructor() { }
-  
-  getAllBlogPosts() : BlogPostItem[] {
-    return this.blogPostList;
+  firestore: Firestore = inject(Firestore);
+  posts$: Observable<BlogPostItem[]>;
+
+  constructor() {
+    const blogsCollection = collection(this.firestore, 'blogs');
+    this.posts$ = collectionData(blogsCollection) as Observable<BlogPostItem[]>;
+
+
   }
+  
+  getAllBlogPosts() : Observable<BlogPostItem[]>{
+    return this.posts$;
+  }
+
   getBlogPostById(id:number): BlogPostItem | undefined {
     return this.blogPostList.find((BlogPostItem) => BlogPostItem.id === id);
   }
@@ -47,6 +58,4 @@ export class BlogService {
   upload(){
    
   }
-
-
 }

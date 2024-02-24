@@ -1,10 +1,20 @@
 <div style="text-align: center;">
     <h2 style="margin: 50px;">Alumni of BEST Skopje</h2>
     <div>
-        @for (member of membersList; track $index;){
-            @if (member.type=="4") {
-               <p>{{member.name}}</p>
+        @defer () {
+            @for (member of membersList | async; track $index;){
+                @if (member.type=="4") {
+                    <p>{{member.name}}</p>
+                }
+            }@empty {
+                <p>The alumni list is empty</p>
             }
+        }@placeholder (minimum 2000ms) {
+            Alumni list
+        }@loading (after 300ms; minimum 2s) {
+            <p>The content is loading <br> Pleace wait</p>
+        }@error {
+            <p>An error has occcured</p>
         }
     </div>
     <hr>
